@@ -104,5 +104,7 @@ dist
 .tern-port
 
 # The gallery directories
-public/galleries/*/
-public/images/*/
+public/galleries/*
+public/images/*
+!public/galleries/README.md
+!public/images/README.md
