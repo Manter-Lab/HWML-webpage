@@ -1,0 +1,55 @@
+/* CSS File for the "People" page */
+.profile {
+    padding: 20px;
+    position: relative;
+}
+
+.profile_img {
+    width: 50%;
+    margin: auto;
+    object-fit: cover;
+    aspect-ratio: 1;
+    border-radius: 25%;
+}
+
+.read_more_button {
+    display: block;
+    cursor: pointer;
+    text-align: left;
+    position: relative;
+    top: -1em;
+    font-size: 16pt;
+    font-weight: bold;
+}
+
+.more {
+    display: none;
+    animation: 0.5s ease-out slide-down;
+    overflow: hidden;
+}
+
+.slide_up {
+    animation: 0.5s ease-in slide-up;
+}
+
+@keyframes slide-down {
+    from {max-height: 0px;}
+    to {max-height: 1000px;}
+}
+
+@keyframes slide-up {
+    from {max-height: 1000px;}
+    to {max-height: 0px;}
+}
+
+@media (prefers-reduced-motion) {
+    @keyframes slide-down {
+        from {max-height: 1000px;}
+        to {max-height: 1000px;}
+    }
+
+    @keyframes slide-up {
+        from {max-height: 1000px;}
+        to {max-height: 1000px;}
+    }
+}

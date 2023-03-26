@@ -1,0 +1,31 @@
+.research_right, .research_left {
+    display: flex;
+}
+
+.research_box_right, .research_box_left {
+    width: 70%;
+}
+
+.research_box_left {
+    text-align: right;
+}
+
+.research_showcase_left, .research_showcase_right {
+    width: 30%;
+    border-radius: 10px;
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+    transform: scale(0.9);
+}
+
+.research_showcase_left:hover, .research_showcase_right:hover {
+    transform: scale(1);
+    box-shadow: 0px 0px 0 #FFF0;
+}
+
+.research_showcase_left {
+    margin-right: 40px;
+}
+
+.research_showcase_right {
+    margin-left: 40px;
+}

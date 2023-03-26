@@ -1,0 +1,22 @@
+{
+  "name": "HWML Website",
+  "version": "0.1.0",
+  "description": "Website for the HWML at UNL",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Grant Gardner",
+  "license": "ISC",
+  "dependencies": {
+    "compression": "^1.7.4",
+    "ejs": "^3.1.9",
+    "express": "^4.18.2",
+    "express-minify": "^1.0.0",
+    "fs": "^0.0.1-security",
+    "fs-extra": "^11.1.1",
+    "html-minify": "^0.3.2",
+    "sharp": "^0.31.3"
+  }
+}

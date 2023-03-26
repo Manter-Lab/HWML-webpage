@@ -1,0 +1,26 @@
+<div class="image_gallery">
+    <div class="left_button"><span>&lt;</span></div>
+    <div class="images">
+        <% imagePaths[0].forEach(function(image, index) { %>
+            <img src="/galleries/<%= image %>.webp" alt="">
+        <% }); %>
+    </div>
+    <div class="right_button" style="right:0;top:0;"><span>&gt;</span></div>
+
+    <div class="selector_buttons">
+        <img class="play_pause" src="/assets/images/icons/pause.svg" alt="Play Pause button">
+        <% imagePaths[0].forEach(function(image, index) { %>
+            <button aria-label="View image <%= index + 1 %>"></button>
+        <% }); %>
+    </div>
+
+    <dialog>
+        <img src="" style="display:block;cursor:unset;">
+    </dialog>
+</div>
+
+<script>
+    var imageList = [];
+    imageList = <%-JSON.stringify(imagePaths)%>;
+</script>
+<script src="/assets/scripts/gallery.js"></script>

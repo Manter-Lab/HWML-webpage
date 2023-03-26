@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<%- include(appDir + '/views/partials/head'); %>
+<body>
+    <%- include(appDir + '/views/partials/header'); %>
+    <div class="header_content">
+        <h1>People</h1>
+    </div>
+    <main>
+        <div class="content dual_column">
+            <h2 style="grid-column: span 2" class="span_1">Current Staff:</h2>
+            <div class="profile">
+                <img class="profile_img" src="/assets/images/staff/scott_gardner.webp" alt="Scott gardner leaning against a cactus">
+                <h2>Scott L. Gardner<p>&mdash; Curator &mdash;</p></h2>
+                <p><b>Dr. Scott Lyell Gardner</b> Dr. Scott Lyell Gardner.  Graduated from Oregon State University where he worked with Robert M. Storm and received a B.S. in Biology/Ecology. In 1983 he received his Masters of Arts degree in<span class="dots">...</span><span class="more"> Zoology/Parasitology from the University of Northern Colorado where he worked on nematodes and cestodes with Gerald D. Schmidt. He completed his Ph.D. at the University of New Mexico where he worked with Don W. Duszynski  and Terry L. Yates. There he studied phylogeny and coevolution of nematode parasites and their ctenomyid (<i><a href="http://digitalcommons.unl.edu/parasitologyfacpubs/722/">Ctenomys</a></i>) hosts in the south central Neotropics.<br>
+                <br>
+                After a one year post-doc in New Mexico, working on coccidian parasites of the genus Eimeria he was appointed Curator of Nematology and Assistant Professor in the Department of Nematology, UC Davis. In 1994 he became Director and Curator of the Harold W. Manter Laboratory of Parasitology in the Division of Parasitology in the University of Nebraska State Museum. He also is an elected fellow of the American Association for the Advancement of Science, a life member of the American Society of Mammalogists, an adjunct professor at the University of Nebraska Medical Center, and Professor of Biological Sciences, the University of Nebaska-Lincoln.</span></p>
+                <a onclick="showMore(event)" class="read_more_button">▾ Read more ▾</a>
+            </div>
+            <div class="profile">
+                <img class="profile_img" src="/assets/images/staff/gabor_racz.webp">
+                <h2>Gabor R. Racz<p>&mdash; Collections Manager &mdash;</p></h2>
+                <p>[BIO GOES HERE] Curabitur ac fringilla mi. Proin ut purus risus. Fusce id mi mauris. Nulla at augue ornare, congue mauris a, venenatis est. In at euismod ligula, eget semper leo. Vestibulum ut elit facilisis, porttitor<span class="dots">...</span><span class="more"> ipsum id, vestibulum ipsum. Morbi pulvinar vitae turpis in maximus. Phasellus cursus aliquet est eget placerat. Ut vehicula luctus faucibus. In hac habitasse platea dictumst. Proin consequat eu enim at rhoncus. Phasellus et metus eu nulla pellentesque pretium nec et arcu. Praesent consectetur urna sed nisl luctus, in elementum massa tincidunt. Vivamus a pharetra ex.</p>
+                <a onclick="showMore(event)" class="read_more_button">▾ Read more ▾</a>
+            </div>
+
+            <hr style="grid-column: span 2" class="span_1">
+
+            <h2 style="grid-column: span 2" class="span_1">Past Staff:</h2>
+            <div class="profile">
+                <img class="profile_img" src="/assets/images/placeholder.webp">
+                <h2>Person Name<p>&mdash; Person &mdash;</p></h2>
+                <p>[BIO GOES HERE] Curabitur ac fringilla mi. Proin ut purus risus. Fusce id mi mauris. Nulla at augue ornare, congue mauris a, venenatis est. In at euismod ligula, eget semper leo. Vestibulum ut elit facilisis, porttitor<span class="dots">...</span><span class="more"> ipsum id, vestibulum ipsum. Morbi pulvinar vitae turpis in maximus. Phasellus cursus aliquet est eget placerat. Ut vehicula luctus faucibus. In hac habitasse platea dictumst. Proin consequat eu enim at rhoncus. Phasellus et metus eu nulla pellentesque pretium nec et arcu. Praesent consectetur urna sed nisl luctus, in elementum massa tincidunt. Vivamus a pharetra ex.</p>
+                <a onclick="showMore(event)" class="read_more_button">▾ Read more ▾</a>
+            </div>
+            <div class="profile">
+                <img class="profile_img" src="/assets/images/placeholder.webp">
+                <h2>Person Name<p>&mdash; Person &mdash;</p></h2>
+                <p>[BIO GOES HERE] Curabitur ac fringilla mi. Proin ut purus risus. Fusce id mi mauris. Nulla at augue ornare, congue mauris a, venenatis est. In at euismod ligula, eget semper leo. Vestibulum ut elit facilisis, porttitor<span class="dots">...</span><span class="more"> ipsum id, vestibulum ipsum. Morbi pulvinar vitae turpis in maximus. Phasellus cursus aliquet est eget placerat. Ut vehicula luctus faucibus. In hac habitasse platea dictumst. Proin consequat eu enim at rhoncus. Phasellus et metus eu nulla pellentesque pretium nec et arcu. Praesent consectetur urna sed nisl luctus, in elementum massa tincidunt. Vivamus a pharetra ex.</p>
+                <a onclick="showMore(event)" class="read_more_button">▾ Read more ▾</a>
+            </div>
+            <div class="profile">
+                <img class="profile_img" src="/assets/images/placeholder.webp">
+                <h2>Person Name<p>&mdash; Person &mdash;</p></h2>
+                <p>[BIO GOES HERE] Curabitur ac fringilla mi. Proin ut purus risus. Fusce id mi mauris. Nulla at augue ornare, congue mauris a, venenatis est. In at euismod ligula, eget semper leo. Vestibulum ut elit facilisis, porttitor<span class="dots">...</span><span class="more"> ipsum id, vestibulum ipsum. Morbi pulvinar vitae turpis in maximus. Phasellus cursus aliquet est eget placerat. Ut vehicula luctus faucibus. In hac habitasse platea dictumst. Proin consequat eu enim at rhoncus. Phasellus et metus eu nulla pellentesque pretium nec et arcu. Praesent consectetur urna sed nisl luctus, in elementum massa tincidunt. Vivamus a pharetra ex.</p>
+                <a onclick="showMore(event)" class="read_more_button">▾ Read more ▾</a>
+            </div>
+
+            <hr style="grid-column: span 2" class="span_1">
+
+            <h2 style="grid-column: span 2" class="span_1">Etc...</h2>
+            <div class="profile">
+                <img class="profile_img" src="/assets/images/placeholder.webp">
+                <h2>Person Name<p>&mdash; Person &mdash;</p></h2>
+                <p>[BIO GOES HERE] Curabitur ac fringilla mi. Proin ut purus risus. Fusce id mi mauris. Nulla at augue ornare, congue mauris a, venenatis est. In at euismod ligula, eget semper leo. Vestibulum ut elit facilisis, porttitor<span class="dots">...</span><span class="more"> ipsum id, vestibulum ipsum. Morbi pulvinar vitae turpis in maximus. Phasellus cursus aliquet est eget placerat. Ut vehicula luctus faucibus. In hac habitasse platea dictumst. Proin consequat eu enim at rhoncus. Phasellus et metus eu nulla pellentesque pretium nec et arcu. Praesent consectetur urna sed nisl luctus, in elementum massa tincidunt. Vivamus a pharetra ex.</p>
+                <a onclick="showMore(event)" class="read_more_button">▾ Read more ▾</a>
+            </div>
+            <div class="profile">
+                <img class="profile_img" src="/assets/images/placeholder.webp">
+                <h2>Person Name<p>&mdash; Person &mdash;</p></h2>
+                <p>[BIO GOES HERE] Curabitur ac fringilla mi. Proin ut purus risus. Fusce id mi mauris. Nulla at augue ornare, congue mauris a, venenatis est. In at euismod ligula, eget semper leo. Vestibulum ut elit facilisis, porttitor<span class="dots">...</span><span class="more">ipsum id, vestibulum ipsum. Morbi pulvinar vitae turpis in maximus. Phasellus cursus aliquet est eget placerat. Ut vehicula luctus faucibus. In hac habitasse platea dictumst. Proin consequat eu enim at rhoncus. Phasellus et metus eu nulla pellentesque pretium nec et arcu. Praesent consectetur urna sed nisl luctus, in elementum massa tincidunt. Vivamus a pharetra ex.</p>
+                <a onclick="showMore(event)" class="read_more_button">▾ Read more ▾</a>
+            </div>
+
+        </div>
+    </main>
+    <%- include(appDir + '/views/partials/footer'); %>
+</body>
+<script src="/assets/scripts/readmore.js"></script>
+</html>

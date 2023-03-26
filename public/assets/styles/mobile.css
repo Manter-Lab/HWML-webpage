@@ -1,0 +1,134 @@
+/* For smartphones and other small vertically screened devices */
+
+@media (max-width: 870px) {
+    /* Hides on mobile devices */
+    .hide-mobile {
+        display: none!important;
+    }
+
+    .show-mobile {
+        display: block!important;
+    }
+
+    .header_content {
+        padding-top: 60px;
+    }
+
+    h1 {
+        font-size: 2.35em!important;
+    }
+
+    /* Make nav a dropdown on mobile */
+    nav {
+        display: block;
+        width: 100%;
+        position: absolute;
+        height: fit-content;
+        max-height: 50px;
+        overflow: hidden;
+        transition: max-height 0.5s ease-out;
+    }
+
+    nav:hover, nav:active {
+        position: absolute;
+        height: fit-content;
+        max-height: 500px;
+    }
+
+    nav img {
+        display: block;
+        margin: 5px auto;
+    }
+
+    nav .nav_item {
+        border: none;
+        font-weight: 700;
+        text-decoration: none;
+        height: 50px;
+        display: block;
+        z-index: 50;
+        position: relative;
+        background-color: #d00000;
+    }
+
+    nav .nav_item:hover {
+        background-color: #ec0000;
+    }
+
+    nav .nav_item p {
+        margin: 0;
+    }
+
+    .unl_link {
+        position: absolute;
+        left: 5px;
+    }
+
+    .img_float_left, .img_float_right {
+        float: none;
+        width: 75%;
+        height: auto;
+        max-width: 300px;
+        margin: 20px auto;
+        display: block;
+    }
+
+    .image_gallery {
+        width: calc(100% + 20px);
+        aspect-ratio: 1 / 1;
+        margin: 10px -10px;
+        border: none;
+    }
+
+    .image_gallery .left_button, .image_gallery .right_button {
+        font-size: 2em;
+        width: 20%;
+    }
+
+    .image_gallery .selector_buttons {
+        padding: 10px 5px;
+        padding-left: 10%;
+    }
+
+    .main_button {
+        margin: inherit auto;
+    }
+
+    footer {
+        grid-template-columns: 1fr;
+    }
+
+    .dual_column {
+        grid-template-columns: 1fr!important;
+    }
+
+    .span_1 {
+        grid-column: span 1!important;
+    }
+
+    .research_left {
+        flex-direction: column;
+    }
+
+    .research_right {
+        flex-direction: column-reverse;
+    }
+
+    .research_left h2, .research_right h2 {
+        font-size: 1.2em;
+    }
+
+    .research_showcase_left, .research_showcase_right {
+        width: 75%;
+        margin: auto;
+    }
+
+    .research_box_right, .research_box_left {
+        width: 100%;
+        text-align: left;
+    }
+
+    .footer_item {
+        width: 100%;
+    }
+}

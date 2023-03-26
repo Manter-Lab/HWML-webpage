@@ -1,0 +1,197 @@
+main img {
+    position: relative;
+    display: block;
+}
+
+/* Image positioning in text */
+.img_float_right {
+    float: right;
+    width: 30%;
+    margin: 15px;
+    margin-left: 30px;
+    z-index: 5;
+    height: auto;
+}
+
+.img_float_left {
+    float: left;
+    max-width: 30%;
+    margin: 15px;
+    margin-right: 30px;
+    z-index: 5;
+}
+
+/* Image shape modifiers */
+.circle {
+    border-radius: 100%;
+    aspect-ratio: 1;
+    object-fit: cover;
+}
+
+.smaller {
+    height: 200px;
+    width: 200px;
+    object-fit: cover;
+}
+
+/* Backdrops */
+.solid_darkgrey_backdrop {
+    box-shadow: 8px -8px 0px #161615;
+}
+
+.solid_lightgrey_backdrop {
+    box-shadow: -5px 10px 0 #888888;
+}
+
+.solid_white_backdrop {
+    box-shadow: 4px -2px 0 #e5e5e5;
+}
+
+
+/* Set up the gallery */
+.image_gallery {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    margin: auto;
+    border: 4px ridge grey;
+    background-color: black;
+    position: relative;
+    touch-action: pan-x;
+}
+
+.image_gallery img {
+    display: none;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    cursor: pointer;
+}
+
+.image_gallery .left_button, .image_gallery .right_button {
+    width: 10%;
+    height: calc(100% - 40px);
+    z-index: 100;
+    position: absolute;
+    background-color: #0005;
+    opacity: 0;
+    font-size: 5em;
+    transition-duration: 0.2s;
+    cursor: pointer;
+    backdrop-filter: blur(1px);
+}
+
+.image_gallery .left_button span, .image_gallery .right_button span {
+    font-family: "Roboto Slab";
+    color: #FFF5;
+    text-align: center;
+    width: 100%;
+    display: block;
+    top: 50%;
+    line-height: 0;
+    position: relative;
+    transform: scaley(2);
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+.image_gallery .left_button:hover, .image_gallery .right_button:hover {
+    opacity: 1;
+}
+
+.image_gallery img.active {
+    opacity: 1;
+    display: block;
+    animation: 1s ease-in-out fade;
+}
+
+.image_gallery img.fadeout {
+    display: block;
+    animation: 1s ease-in-out fade-out!important;
+}
+
+@keyframes fade {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@keyframes fade-out {
+    from {opacity: 1;}
+    to {opacity: 0;}
+}
+
+.image_gallery .selector_buttons {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px 12%;
+    background-color: #0005;
+    backdrop-filter: blur(1px);
+}
+
+.image_gallery .selector_buttons button {
+    aspect-ratio: 1;
+    width: 20px;
+    border-radius: 50%;
+    border: 2px solid #e5e5e5;
+    background-color: #FFF0;
+    transition-duration: 0.2s;
+    cursor: pointer;
+    color: #FFF0;
+}
+
+.image_gallery .selector_buttons button.active {
+    background-color: #42a7c6;
+}
+
+.image_gallery .selector_buttons button:hover {
+    background-color: #AAA;
+}
+
+.image_gallery .selector_buttons button.active:hover {
+    background-color: #42a7c6;
+    filter: brightness(1.2);
+}
+
+dialog {
+    margin: 40px;
+    position: fixed;
+    width: 70%;
+    aspect-ratio: 16 / 9;
+    max-height: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 500;
+    background: black;
+    animation: 0.5s ease-out expand;
+}
+
+dialog::backdrop {
+    background: #0008;
+}
+
+@keyframes expand {
+    from {max-width: 800px;}
+    to {max-width: 2400px;}
+}
+
+img.play_pause {
+    position: absolute;
+    left: 1%;
+    bottom: 0;
+    margin: 0;
+    height: 100%;
+    width: auto;
+    top: 0;
+    display: block;
+    color: white;
+    filter: invert();
+    cursor: pointer;
+}

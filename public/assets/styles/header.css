@@ -1,0 +1,89 @@
+header {
+    width: 100%;
+    height: 120px;
+    height: fit-content;
+    position: relative;
+}
+
+.header_content {
+    padding: 20px 5px;
+    display: flex;
+    justify-content: space-between;
+    background-color: #2e2e2d;
+    position: relative;
+}
+
+.header_content::before {
+    content: "";
+    width: 100vw;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: calc(0px - (100vw - 100%)/2);
+    background-color: inherit;
+    z-index: -1;
+    border-bottom: 2px solid #6d6d69;
+}
+
+.header_content img {
+    position: relative;
+    height: 120px;
+    bottom: -20px;
+}
+
+
+/* Navigation bar */
+nav {
+    display: flex;
+    background-color: #d00000;
+    height: 50px;
+    z-index: 5;
+}
+
+nav::before {
+    content: "";
+    width: 100vw;
+    position: absolute;
+    left: calc(0px - (100vw - 100%)/2);
+    height: 50px;
+    background-color: inherit;
+    z-index: -1;
+    border-bottom: 1px solid #242423;
+}
+
+nav img {
+    height: 40px;
+    margin-top: 5px;
+    margin-right: 5px;
+    margin-left: 5px;
+}
+
+nav a, nav a:hover, nav a:visited {
+    color: #fefdfa;
+}
+
+nav .nav_item {
+    font-family: "Roboto Slab", sans-serif;
+    font-weight: bold;
+    flex-grow: 2;
+    min-width: fit-content;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 1.3em;
+    color: #fefdfa;
+    border-left: 1px solid #a00000;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+nav .nav_item:hover {
+    background-color: #dd0000;
+}
+
+nav .nav_item p {
+    position: relative;
+    top: 50%;
+    transform: translatey(-50%);
+    line-height: 1;
+    padding: 0;
+}
