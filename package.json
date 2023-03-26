@@ -8,7 +8,7 @@
   },
   "keywords": [],
   "author": "Grant Gardner",
-  "license": "ISC",
+  "license": "AGPL",
   "dependencies": {
     "compression": "^1.7.4",
     "ejs": "^3.1.9",

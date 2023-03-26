@@ -67,7 +67,7 @@ app.get('/', function(req, res) {
     res.locals.title = "HWML | Nebraska";
 
     // This line sets the description in the OpenGraph preview (like on Discord)
-    res.locals.description = "The Harold W. Manter Laboratory of Parasitology is ranked as one of the the most important centers of Systematic Parasitology in the World."
+    res.locals.description = defaultDescription;
 
     res.render('pages/main', {imagePaths: mainGallery});
 });
