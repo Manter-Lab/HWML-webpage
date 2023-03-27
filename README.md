@@ -4,18 +4,18 @@ This is the main server file for the HWML main page. It uses NodeJS, EJS, and Ex
 
 ## Requirements:
 
-This server file requires Node v14+ to run.
+This server requires Node v14+ to run.
 
 ## Dependencies
 
-This server file utilizes the following libraries:
+This server utilizes the following libraries:
 
-- Express
-- Express Minify
-- Compression
-- EJS
-- fs-extra
-- Sharp
+- [Express](https://expressjs.com/)
+- [Express Minify](https://www.npmjs.com/package/express-minify)
+- [Compression](https://www.npmjs.com/package/compression)
+- [EJS](https://ejs.co/)
+- [fs-extra](https://www.npmjs.com/package/fs-extra)
+- [Sharp](https://sharp.pixelplumbing.com/)
 
 ## Getting Started
 
@@ -34,6 +34,7 @@ To create a new page, follow these steps:
     - Ex. `/views/pages/page.ejs`
 2. Copy the contents of `main.ejs` to your new file.
 3. Update the contents of your new file to match the content of your new page.
+    - Be sure to utilize the CSS classes properly! Follow how it's done on the existing pages
 4. Create a new route in `server.js` for your new page, like so:
 
 ```javascript
@@ -44,4 +45,30 @@ app.get('/your-page', function(req, res) {
     res.render('pages/your-page');
 });
 ```
-5. Change "Your Page Title" to be whatever the title of the new page, and change "Your Page Description" to the description of the content of the new page
+5. Change "Your Page Title" to the title of the new page, and change "Your Page Description" to a description of the content of the new page
+
+## Creating a Gallery
+
+1. Create a new folder in the `public/images` directory.
+2. Add the images you want to display to the folder
+3. Import the `resize_images.js` module in the `server.js` file:
+
+```javascript
+resize = require('./utils/resize_images.js');
+```
+4. Call the `resizeGalleries()` function, replacing "your-gallery" with the name of your new folder and `800` with the desired image width in pixels:
+
+```javascript
+const newGallery = resize.resizeGalleries("your-gallery", 800);
+```
+5. Include the gallery in your new page when rendering as a variable, like this:
+
+```javascript
+res.render('pages/your-page', {imagePaths: newGallery});
+```
+6. Include the gallery somewhere in your page:
+
+```javascript
+<%- include(appDir + '/views/partials/gallery'); %>
+```
+7. Save, and restart the server. Additionally, the server must be restarted when changing the gallery's images.
