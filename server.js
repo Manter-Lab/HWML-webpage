@@ -1,18 +1,30 @@
 /*
- ╭──────────────────────[README:]──────────────────────╮
- ╽ This is the main server file for the HWML web page  ╽
- ║                                                     ║
- ║ It uses NodeJS, EJS, and Express to deliver content ║
- ║                                                     ║
- ║ It doesn't work the same way as a normal Apache or  ║
- ║ NGINX server! Keep that in mind when modifying the  ║
- ╿ files within it.                                    ╿
- ├─────────────────────────────────────────────────────┤
- ╽ REQUIRES Node v14+                                  ╽
- ║                                                     ║
- ║ This server file utilizes some libraries, which are ║
- ╿ listed below ↯                                      ╿
- ╰─────────────────────────────────────────────────────╯
+ ╭──────────────────────[README:]────────────────────────╮
+ ╽ This is the main server file for the HWML main page.  ╽
+ ║                                                       ║
+ ║ It uses Node.js, EJS, and Express to deliver content. ║
+ ║                                                       ║
+ ║ This server does not function the same way as a       ║
+ ║ normal Apache or NGINX server, so keep that in mind   ║
+ ║ when modifying the files within it.                   ║
+ ╿                                                       ╿
+ ├───────────────────────────────────────────────────────┤
+ ╽ Requirements:                                         ╽
+ ║                                                       ║
+ ║ Node.js v14+                                          ║
+ ╿                                                       ╿
+ ├───────────────────────────────────────────────────────┤
+ ╽ Libraries used:                                       ╽
+ ║                                                       ║
+ ║ - Express                                             ║
+ ║ - Express-minify                                      ║
+ ║ - Compression                                         ║
+ ║ - fs-extra                                            ║
+ ║ - sharp                                               ║
+ ║                                                       ║
+ ║ These libraries can be installed using npm.           ║
+ ╿                                                       ╿
+ ╰───────────────────────────────────────────────────────╯
  */
 
 // Add the required libraries
