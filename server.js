@@ -1,6 +1,6 @@
 /*
  ╭──────────────────────[README:]──────────────────────╮
- ╽ This is the main server file for the HWML main page ╽
+ ╽ This is the main server file for the HWML web page  ╽
  ║                                                     ║
  ║ It uses NodeJS, EJS, and Express to deliver content ║
  ║                                                     ║
@@ -16,15 +16,16 @@
  */
 
 // Add the required libraries
-let express = require('express');
-let minify = require('express-minify');
+const express = require('express');
+const minify = require('express-minify');
 const compression = require('compression');
 const path = require('path');
-let fs = require('fs-extra');
+const fs = require('fs-extra');
 let app = express();
 
-// Import the gallery code I made
+// Import the gallery code and set up the main page gallery
 resize = require('./utils/resize_images.js');
+let mainGallery = resize.resizeGalleries('main_gallery', 800);
 
 // Set the view engine to ejs
 app.set('view engine', 'ejs');
@@ -35,9 +36,6 @@ app.use(express.static(__dirname + '/public'));
 // Set some default variables:
 const appDir = path.dirname(require.main.filename);
 const defaultDescription = "The Harold W. Manter Laboratory of Parasitology is ranked as one of the the most important centers of Systematic Parasitology in the World."
-
-// Galleries
-let mainGallery = resize.resizeGalleries("main_gallery", 800);
 
 /*var resizedImages = [];
 (async function() {
@@ -56,10 +54,7 @@ let mainGallery = resize.resizeGalleries("main_gallery", 800);
     console.log("Finished Resizing!");
 })(); */
 
-/*
- * Below is a template for how to set up a page,  *
- * comments are provided to explain what stuff is *
- */
+// Set up the main page
 app.get('/', function(req, res) {
     res.locals.appDir = appDir;
 
@@ -72,7 +67,7 @@ app.get('/', function(req, res) {
     res.render('pages/main', {imagePaths: mainGallery});
 });
 
-// Create other pages
+// Set up other pages
 app.get('/policy', function(req, res) {
     res.locals.appDir = appDir;
     res.locals.title = "Collections Policy | HWML | Nebraska";
