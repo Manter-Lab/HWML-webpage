@@ -11,7 +11,7 @@ module.exports = {
         const resizeDir = 'public/galleries/' + galleryName;
         const imageFilenames = fs.readdirSync(imageDir);
 
-        // Ensure the target resize directory is clear
+        // Ensure the target resize directory exists and is clear
         fs.emptyDirSync(resizeDir);
 
         // Loop over all the images in the original directory,
