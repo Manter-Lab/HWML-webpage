@@ -2,9 +2,9 @@
 
 This is the main server file for the HWML main page. It uses NodeJS, EJS, and Express to deliver content. It doesn't work the same way as a normal Apache or NGINX server, so keep that in mind when modifying the files within it.
 
-## Requirements:
+## Prerequisites:
 
-This server requires Node v14+ to run.
+This server requires [NPM](https://www.npmjs.com/) and [Node](https://nodejs.org/en) v14+ to run.
 
 ## Dependencies
 
@@ -21,8 +21,18 @@ This server utilizes the following libraries:
 
 Setting up the site is simple! Just follow these steps:
 
-1. Clone this repository to your local machine.
-2. Navigate to the project directory in your terminal.
+1. Clone this repository to your local machine:
+
+    ```bash
+    git clone https://github.com/G2-Games/HWML-webpage.git
+    ```
+    
+2. Navigate to the project directory in your terminal:
+
+    ```bash
+    cd HWML-webpage
+    ```
+
 3. Run `npm install` to install the necessary dependencies.
 4. Run `npm start` to start the server.
 
