@@ -99,7 +99,7 @@ imageContainer.onclick = e => {
         var rect = dialog.getBoundingClientRect();
         var isInDialog=(rect.top <= event.clientY && event.clientY <= rect.top + rect.height
         && rect.left <= event.clientX && event.clientX <= rect.left + rect.width);
-        if (!isInDialog) {
+        if(!isInDialog) {
             dialog.close();
         }
     });
@@ -111,6 +111,7 @@ imageContainer.onclick = e => {
     var fullResImage = "/images/" + fullImage + extension;
     dialog.showModal();
     dialog.children[0].src = fullResImage;
+    dialog.children[1].href = fullResImage;
 }
 
 buttonBar.onclick = e => {
