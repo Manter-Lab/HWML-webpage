@@ -114,10 +114,6 @@
         flex-direction: column-reverse;
     }
 
-    .research_left h2, .research_right h2 {
-        font-size: 1.2em;
-    }
-
     .research_showcase_left, .research_showcase_right {
         width: 75%;
         margin: auto;
