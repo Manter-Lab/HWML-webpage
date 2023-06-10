@@ -129,6 +129,7 @@ main img {
     bottom: 0;
     width: 100%;
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-between;
     padding: 10px 12%;
