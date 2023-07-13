@@ -113,6 +113,13 @@ app.get('/documents/mission', function(req, res) {
     res.render('pages/documents/mission');
 });
 
+app.get('/documents/zaiman', function(req, res) {
+    res.locals.appDir = appDir;
+    res.locals.title = "Zaiman Medical Parasite Images | HWML | Nebraska";
+    res.locals.description = "The collection of Dr. Herman Zaiman's slides";
+    res.render('pages/documents/zaiman');
+});
+
 console.log('Set up pages');
 
 // Set up server side compression
