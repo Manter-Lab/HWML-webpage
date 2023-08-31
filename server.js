@@ -113,6 +113,13 @@ app.get('/documents/mission', function(req, res) {
     res.render('pages/documents/mission');
 });
 
+app.get('/documents/specimen-deposition', function(req, res) {
+    res.locals.appDir = appDir;
+    res.locals.title = "Specimen Deposition | HWML | Nebraska";
+    res.locals.description = "Instructions for specimen deposition in the Manter Laboratory";
+    res.render('pages/documents/specimen-deposition');
+});
+
 app.get('/documents/zaiman', function(req, res) {
     res.locals.appDir = appDir;
     res.locals.title = "Zaiman Medical Parasite Images | HWML | Nebraska";
@@ -128,4 +135,4 @@ app.use(minify());
 
 // Start the server
 app.listen(7990);
-console.log('Server is listening on port 7990');
+console.log('Server is listening on http://0.0.0.0:7990');
