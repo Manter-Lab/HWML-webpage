@@ -127,7 +127,7 @@ app.get('/documents/zaiman', function(req, res) {
     res.render('pages/documents/zaiman');
 });
 
-app.get('*', function(req, res) {\
+app.get('*', function(req, res) {
     res.locals.appDir = appDir;
     res.render('pages/errors/404');
 });
