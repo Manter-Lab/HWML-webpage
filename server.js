@@ -129,6 +129,8 @@ app.get('/documents/zaiman', function(req, res) {
 
 app.get('*', function(req, res) {
     res.locals.appDir = appDir;
+    res.locals.title = "404 | HWML | Nebraska";
+    res.locals.description = "404 Page";
     res.render('pages/errors/404');
 });
 
