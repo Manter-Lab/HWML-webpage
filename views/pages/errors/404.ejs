@@ -2,9 +2,12 @@
 <html lang="en">
 <%- include(appDir + '/views/partials/head'); %>
 <body>
-    <main>
-        <h1>404, File Not Found</h1>
-        <h2>Sorry!</h2>
+    <%- include(appDir + '/views/partials/header'); %>
+    <main style="text-align:center;width:fit-content;margin:auto;">
+        <h1>404: Not Found</h1>
+        <p>The page or file you were looking for couldn't be found.</p>
+        <a href="/" class="main_button" style="margin:auto;">Return to Home</a>
     </main>
+    <%- include(appDir + '/views/partials/footer'); %>
 </body>
 </html>

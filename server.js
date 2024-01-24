@@ -32,7 +32,6 @@ const express = require('express');
 const minify = require('express-minify');
 const compression = require('compression');
 const path = require('path');
-const fs = require('fs-extra');
 let app = express();
 
 // Import the gallery code and set up the main page gallery
