@@ -22,6 +22,23 @@
     margin-bottom: 5px;
 }
 
+.student_grid {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+    gap: 20px;
+
+    div {
+        width: 200px;
+        font-size: 10pt;
+    }
+
+    p {
+        font-size: 12pt;
+        margin-bottom: 5px;
+    }
+}
+
 .profile_img {
     width: 50%;
     margin: auto;

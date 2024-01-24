@@ -204,3 +204,10 @@ blockquote::after {
 .show-mobile {
     display: none;
 }
+
+.icon {
+    display: inline-block;
+    height: 1.2em;
+    color: inherit;
+    vertical-align: sub;
+}
