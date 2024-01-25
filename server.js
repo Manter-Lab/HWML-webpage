@@ -32,7 +32,6 @@ const express = require('express');
 const minify = require('express-minify');
 const compression = require('compression');
 const path = require('path');
-const fs = require('fs-extra');
 let app = express();
 
 // Import the gallery code and set up the main page gallery
@@ -67,7 +66,7 @@ const defaultDescription = "The Harold W. Manter Laboratory of Parasitology is r
 })(); */
 
 // Set up the main page
-app.get('/', function(req, res) {
+app.get('/', function(_req, res) {
     res.locals.appDir = appDir;
 
     // This line sets the title per page
@@ -80,25 +79,25 @@ app.get('/', function(req, res) {
 });
 
 // Set up other pages
-app.get('/policy', function(req, res) {
+app.get('/policy', function(_req, res) {
     res.locals.appDir = appDir;
     res.locals.title = "Collections Policy | HWML | Nebraska";
     res.locals.description = defaultDescription;
     res.render('pages/policy');
 });
-app.get('/staff', function(req, res) {
+app.get('/people', function(_req, res) {
     res.locals.appDir = appDir;
     res.locals.title = "Staff | HWML | Nebraska";
     res.locals.description = defaultDescription;
     res.render('pages/staff');
 });
-app.get('/research', function(req, res) {
+app.get('/research', function(_req, res) {
     res.locals.appDir = appDir;
     res.locals.title = "Research | HWML | Nebraska";
     res.locals.description = defaultDescription;
     res.render('pages/research');
 });
-app.get('/support', function(req, res) {
+app.get('/support', function(_req, res) {
     res.locals.appDir = appDir;
     res.locals.title = "Funding and Support | HWML | Nebraska";
     res.locals.description = defaultDescription;
@@ -106,28 +105,28 @@ app.get('/support', function(req, res) {
 });
 
 // Set up additional pages
-app.get('/documents/mission', function(req, res) {
+app.get('/documents/mission', function(_req, res) {
     res.locals.appDir = appDir;
     res.locals.title = "Mission Statement | HWML | Nebraska";
     res.locals.description = "The HWML Mission Statement";
     res.render('pages/documents/mission');
 });
 
-app.get('/documents/specimen-deposition', function(req, res) {
+app.get('/documents/specimen-deposition', function(_req, res) {
     res.locals.appDir = appDir;
     res.locals.title = "Specimen Deposition | HWML | Nebraska";
     res.locals.description = "Instructions for specimen deposition in the Manter Laboratory";
     res.render('pages/documents/specimen-deposition');
 });
 
-app.get('/documents/zaiman', function(req, res) {
+app.get('/documents/zaiman', function(_req, res) {
     res.locals.appDir = appDir;
     res.locals.title = "Zaiman Medical Parasite Images | HWML | Nebraska";
     res.locals.description = "The collection of Dr. Herman Zaiman's slides";
     res.render('pages/documents/zaiman');
 });
 
-app.get('*', function(req, res) {
+app.get('*', function(_req, res) {
     res.locals.appDir = appDir;
     res.locals.title = "404 | HWML | Nebraska";
     res.locals.description = "404 Page";

@@ -4,12 +4,54 @@
     position: relative;
 }
 
+/* 5 wide grid */
+.fellows {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+    gap: 20px;
+}
+
+.fellows div {
+    width: 350px;
+    font-size: 10pt;
+}
+
+.fellows div p {
+    font-size: 12pt;
+    margin-bottom: 5px;
+}
+
+.student_grid {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+    gap: 20px;
+
+    div {
+        width: 200px;
+        font-size: 10pt;
+    }
+
+    p {
+        font-size: 12pt;
+        margin-bottom: 5px;
+    }
+}
+
 .profile_img {
     width: 50%;
     margin: auto;
     object-fit: cover;
     aspect-ratio: 1;
     border-radius: 25%;
+}
+
+.profile_img.small {
+    width: 120px;
+    border-radius: 10%;
+    float: left;
+    margin-right: 10px;
 }
 
 .read_more_button {
