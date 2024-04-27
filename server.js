@@ -126,6 +126,13 @@ app.get('/documents/zaiman', function(_req, res) {
     res.render('pages/documents/zaiman');
 });
 
+app.get('/documents/centenary', function(_req, res) {
+    res.locals.appDir = appDir;
+    res.locals.title = "Centenary Schedule | HWML | Nebraska";
+    res.locals.description = "The schedule of activities for the Pritchard centenary celebration";
+    res.render('pages/documents/pritchard-centennial-schedule.ejs');
+});
+
 app.get('*', function(_req, res) {
     res.locals.appDir = appDir;
     res.locals.title = "404 | HWML | Nebraska";
