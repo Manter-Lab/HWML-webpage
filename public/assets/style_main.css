@@ -157,7 +157,6 @@ blockquote::after {
 .tilted_background::before {
     background-color: #1f1f1e;
     clip-path: polygon(0% 30%, 100% 0%, 100% 70%, 0% 100%);
-    filter: blur(10px);
 }
 
 .dual_column {
