@@ -87,7 +87,7 @@ app.get('/policy', function(_req, res) {
 });
 app.get('/people', function(_req, res) {
     res.locals.appDir = appDir;
-    res.locals.title = "Staff | HWML | Nebraska";
+    res.locals.title = "People | HWML | Nebraska";
     res.locals.description = defaultDescription;
     res.render('pages/staff');
 });
