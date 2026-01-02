@@ -129,7 +129,7 @@ app.get('/documents/zaiman', function(_req, res) {
 app.get('/documents/centenary', function(_req, res) {
     res.locals.appDir = appDir;
     res.locals.title = "Centenary Schedule | HWML | Nebraska";
-    res.locals.description = "The schedule of activities for the Pritchard centenary celebration";
+    res.locals.description = "This was the schedule of activities when we celebrated Mary-Lou's 100th Birthday";
     res.render('pages/documents/pritchard-centennial-schedule.ejs');
 });
 
